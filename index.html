@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yash Bhaskar Gunavare — Portfolio</title>
+  <meta name="description" content="Portfolio of Yash Bhaskar Gunavare — Backend & Web Developer, ML enthusiast." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header id="top">
+    <nav id="navbar" class="nav">
+      <div class="brand" aria-hidden="true">
+        <span class="logo">YG</span>
+        <span class="brand-text">Yash Gunavare</span>
+      </div>
+
+      <button id="mobile-toggle" class="mobile-toggle" aria-expanded="false" aria-controls="nav-links">
+        ☰ <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="#about" data-tab="about" class="nav-link active">About</a></li>
+        <li role="none"><a role="menuitem" href="#skills" data-tab="skills" class="nav-link">Skills</a></li>
+        <li role="none"><a role="menuitem" href="#projects" data-tab="projects" class="nav-link">Projects</a></li>
+        <li role="none"><a role="menuitem" href="#resume" data-tab="resume" class="nav-link">Resume</a></li>
+        <li role="none"><a role="menuitem" href="#contact" data-tab="contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn ghost" aria-pressed="false">🌙</button>
+        <a class="btn primary" href="resume.pdf" download>Download CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO / About -->
+    <section id="about" class="section hero reveal" tabindex="0" aria-labelledby="about-title">
+      <div class="container grid hero-grid">
+        <div class="hero-left">
+          <h1 id="about-title">Hi — I'm <span class="accent">Yash</span>, <span class="muted">a backend & web developer</span></h1>
+          <p class="lead">
+            Computer Engineering student building reliable backend systems, APIs and practical ML prototypes.
+            I enjoy turning data into features and shipping clean, maintainable code.
+          </p>
+
+          <div class="cta-row">
+            <a href="#projects" class="btn primary">See Projects</a>
+            <a href="#contact" class="btn ghost">Get in touch</a>
+          </div>
+
+          <ul class="quick-info">
+            <li><strong>Location:</strong> Pune, India</li>
+            <li><strong>Availability:</strong> Internships & Entry Roles</li>
+            <li><strong>Languages:</strong> English, Marathi, Hindi</li>
+          </ul>
+        </div>
+
+        <div class="hero-right card">
+          <img src="assets/profile.svg" alt="Profile photo of Yash (placeholder)" class="profile-photo" />
+          <div class="contact-mini">
+            <div><strong>Email</strong><br /><a href="mailto:yashgunavare04@gmail.com">yashgunavare04@gmail.com</a></div>
+            <div><strong>Phone</strong><br /><a href="tel:+918010771872">+91 8010771872</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section reveal" tabindex="0" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Skills</h2>
+        <p class="section-sub">Technologies, tools and areas I work in</p>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Backend</h3>
+            <div class="skill-list">
+              <div class="skill">
+                <div class="skill-name">Java / Spring Boot</div>
+                <div class="skill-bar" data-level="85" aria-hidden="true"><span></span></div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">Node.js / Express</div>
+                <div class="skill-bar" data-level="75"><span></span></div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">Databases (MySQL)</div>
+                <div class="skill-bar" data-level="80"><span></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Frontend</h3>
+            <div class="skill-list">
+              <div class="skill"><div class="skill-name">HTML / CSS / JS</div><div class="skill-bar" data-level="80"><span></span></div></div>
+              <div class="skill"><div class="skill-name">React (basics)</div><div class="skill-bar" data-level="65"><span></span></div></div>
+              <div class="skill"><div class="skill-name">Responsive Design</div><div class="skill-bar" data-level="85"><span></span></div></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Data & Tools</h3>
+            <div class="skill-list">
+              <div class="skill"><div class="skill-name">Python / ML (CNN)</div><div class="skill-bar" data-level="60"><span></span></div></div>
+              <div class="skill"><div class="skill-name">Git / GitHub</div><div class="skill-bar" data-level="80"><span></span></div></div>
+              <div class="skill"><div class="skill-name">Salesforce Classic</div><div class="skill-bar" data-level="55"><span></span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section reveal" tabindex="0" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Selected Projects</h2>
+        <p class="section-sub">Interactive demos, source links and short descriptions</p>
+
+        <div class="projects-controls">
+          <input id="project-search" type="search" placeholder="Search projects (title or description)..." aria-label="Search projects" />
+          <select id="project-filter" aria-label="Filter projects">
+            <option value="all">All</option>
+            <option value="web">Web</option>
+            <option value="ml">ML</option>
+            <option value="salesforce">Salesforce</option>
+          </select>
+        </div>
+
+        <div id="projects-grid" class="projects-grid" aria-live="polite">
+          <!-- JS will inject project cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="section reveal" tabindex="0" aria-labelledby="resume-title">
+      <div class="container">
+        <h2 id="resume-title">Resume</h2>
+        <p class="section-sub">Downloadable CV and key education/certifications</p>
+
+        <div class="resume-grid">
+          <div class="card">
+            <h3>Education</h3>
+            <ul>
+              <li><strong>B.E. — Computer Engineering</strong>, Keystone School of Engineering (SPPU), 2022–2026 (Pursuing)</li>
+              <li><strong>Diploma — Information Technology</strong>, AISSMS Polytechnic, 2020–2023</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Certifications</h3>
+            <ul>
+              <li>OCI Foundations • Java Programming • Infosys Springboard</li>
+            </ul>
+            <a class="btn primary" href="resume.pdf" download>Download full resume (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section reveal" tabindex="0" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Contact</h2>
+        <p class="section-sub">Send a message or connect on LinkedIn / GitHub</p>
+
+        <div class="contact-grid">
+          <form id="contact-form" class="card form" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" required minlength="2" />
+              <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+              <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" required />
+              <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="form-row form-actions">
+              <button type="submit" class="btn primary">Send message</button>
+              <button type="reset" class="btn ghost">Reset</button>
+            </div>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
+
+          <aside class="card contact-card">
+            <h3>Quick links</h3>
+            <p><strong>Email:</strong> <a href="mailto:yashgunavare04@gmail.com">yashgunavare04@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+918010771872">+91 8010771872</a></p>
+            <p>
+              <a class="link" href="https://github.com/yashgunavare" target="_blank" rel="noopener">GitHub</a> ·
+              <a class="link" href="https://www.linkedin.com/in/yashgunavare" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="curYear"></span> Yash Bhaskar Gunavare — Built with HTML, CSS & JavaScript</p>
+      <a href="#top" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
